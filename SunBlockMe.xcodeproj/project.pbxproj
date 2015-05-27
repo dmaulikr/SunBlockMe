@@ -14,6 +14,7 @@
 		23BC0BCB1B153F7D00ED516A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BC0BCA1B153F7D00ED516A /* Images.xcassets */; };
 		23BC0BCE1B153F7D00ED516A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23BC0BCC1B153F7D00ED516A /* LaunchScreen.xib */; };
 		23BC0BDA1B153F7D00ED516A /* SunBlockMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BD91B153F7D00ED516A /* SunBlockMeTests.swift */; };
+		23BC0BE41B1552F800ED516A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BC0BE31B1552F700ED516A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		23BC0BD31B153F7D00ED516A /* SunBlockMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunBlockMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BC0BD81B153F7D00ED516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23BC0BD91B153F7D00ED516A /* SunBlockMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunBlockMeTests.swift; sourceTree = "<group>"; };
+		23BC0BE31B1552F700ED516A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BC0BE41B1552F800ED516A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		23BC0BB31B153F7D00ED516A = {
 			isa = PBXGroup;
 			children = (
+				23BC0BE31B1552F700ED516A /* CoreLocation.framework */,
 				23BC0BBE1B153F7D00ED516A /* SunBlockMe */,
 				23BC0BD61B153F7D00ED516A /* SunBlockMeTests */,
 				23BC0BBD1B153F7D00ED516A /* Products */,
@@ -422,6 +426,7 @@
 				23BC0BDF1B153F7D00ED516A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23BC0BE01B153F7D00ED516A /* Build configuration list for PBXNativeTarget "SunBlockMeTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				23BC0BE21B153F7D00ED516A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
