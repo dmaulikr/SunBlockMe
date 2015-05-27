@@ -169,6 +169,11 @@
 					23BC0BBB1B153F7D00ED516A = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = N76RBB796S;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					23BC0BD21B153F7D00ED516A = {
 						CreatedOnToolsVersion = 6.3.2;
