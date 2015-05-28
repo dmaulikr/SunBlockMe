@@ -28,7 +28,6 @@ class FirstViewController: UIViewController {
         spfLabel.text = "SPF"
         spfLabel.font = UIFont(name: "sunday", size: 60.0)
         spfText.font = UIFont(name: "SUNN", size: 55.0)
-        spfText.returnKeyType = .Done
         activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
     }
 
