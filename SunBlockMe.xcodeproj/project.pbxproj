@@ -11,6 +11,8 @@
 		238D0C071B169A0900703F8C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C031B169A0900703F8C /* Parse.framework */; };
 		238D0C081B169A0900703F8C /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C041B169A0900703F8C /* ParseCrashReporting.framework */; };
 		238D0C091B169A0900703F8C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C051B169A0900703F8C /* ParseUI.framework */; };
+		238D0C0E1B16B6D400703F8C /* SUNN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0D1B16B6D400703F8C /* SUNN.otf */; };
+		238D0C101B16B6E900703F8C /* sunday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0F1B16B6E900703F8C /* sunday.otf */; };
 		23BC0BC21B153F7D00ED516A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC11B153F7D00ED516A /* AppDelegate.swift */; };
 		23BC0BC41B153F7D00ED516A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC31B153F7D00ED516A /* FirstViewController.swift */; };
 		23BC0BC61B153F7D00ED516A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC51B153F7D00ED516A /* SecondViewController.swift */; };
@@ -36,6 +38,8 @@
 		238D0C031B169A0900703F8C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		238D0C041B169A0900703F8C /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		238D0C051B169A0900703F8C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		238D0C0D1B16B6D400703F8C /* SUNN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SUNN.otf; sourceTree = "<group>"; };
+		238D0C0F1B16B6E900703F8C /* sunday.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunday.otf; sourceTree = "<group>"; };
 		23BC0BBC1B153F7D00ED516A /* SunBlockMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunBlockMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BC0BC01B153F7D00ED516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23BC0BC11B153F7D00ED516A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		238D0C0A1B16B69400703F8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				238D0C0B1B16B6A000703F8C /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		238D0C0B1B16B6A000703F8C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				238D0C0F1B16B6E900703F8C /* sunday.otf */,
+				238D0C0D1B16B6D400703F8C /* SUNN.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		23BC0BB31B153F7D00ED516A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +122,7 @@
 		23BC0BBE1B153F7D00ED516A /* SunBlockMe */ = {
 			isa = PBXGroup;
 			children = (
+				238D0C0A1B16B69400703F8C /* Resources */,
 				23BC0BC11B153F7D00ED516A /* AppDelegate.swift */,
 				23BC0BC31B153F7D00ED516A /* FirstViewController.swift */,
 				23BC0BC51B153F7D00ED516A /* SecondViewController.swift */,
@@ -225,7 +247,9 @@
 			files = (
 				23BC0BC91B153F7D00ED516A /* Main.storyboard in Resources */,
 				23BC0BCE1B153F7D00ED516A /* LaunchScreen.xib in Resources */,
+				238D0C101B16B6E900703F8C /* sunday.otf in Resources */,
 				23BC0BCB1B153F7D00ED516A /* Images.xcassets in Resources */,
+				238D0C0E1B16B6D400703F8C /* SUNN.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

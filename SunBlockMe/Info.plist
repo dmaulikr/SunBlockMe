@@ -51,5 +51,10 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>sunday.otf</string>
+		<string>SUNN.otf</string>
+	</array>
 </dict>
 </plist>
