@@ -1,0 +1,30 @@
+
+/* Class = "UIViewController"; title = "Sunblock Reminder"; ObjectID = "8rJ-Kc-sve"; */
+"8rJ-Kc-sve.title" = "Sunblock Reminder";
+
+/* Class = "UIViewController"; title = "Activity"; ObjectID = "9pv-A4-QxB"; */
+"9pv-A4-QxB.title" = "Activity";
+
+/* Class = "UILabel"; text = "Loaded by FirstViewController"; ObjectID = "A5M-7J-77L"; */
+"A5M-7J-77L.text" = "Loaded by FirstViewController";
+
+/* Class = "UITabBarItem"; title = "UV Index"; ObjectID = "Ctc-hT-vbH"; */
+"Ctc-hT-vbH.title" = "UV Index";
+
+/* Class = "UIViewController"; title = "UV Index"; ObjectID = "HCv-ba-8hp"; */
+"HCv-ba-8hp.title" = "UV Index";
+
+/* Class = "UILabel"; text = "First View"; ObjectID = "KQZ-1w-vlD"; */
+"KQZ-1w-vlD.text" = "First View";
+
+/* Class = "UILabel"; text = "Loaded by SecondViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by SecondViewController";
+
+/* Class = "UITabBarItem"; title = "Activity"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Activity";
+
+/* Class = "UITabBarItem"; title = "SPF Reminder"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "SPF Reminder";
+
+/* Class = "UILabel"; text = "Second View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Second View";
