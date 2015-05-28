@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		238D0C061B169A0900703F8C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C021B169A0900703F8C /* Bolts.framework */; };
-		238D0C071B169A0900703F8C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C031B169A0900703F8C /* Parse.framework */; };
-		238D0C081B169A0900703F8C /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C041B169A0900703F8C /* ParseCrashReporting.framework */; };
-		238D0C091B169A0900703F8C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C051B169A0900703F8C /* ParseUI.framework */; };
 		238D0C0E1B16B6D400703F8C /* SUNN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0D1B16B6D400703F8C /* SUNN.otf */; };
 		238D0C101B16B6E900703F8C /* sunday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0F1B16B6E900703F8C /* sunday.otf */; };
 		23BC0BC21B153F7D00ED516A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC11B153F7D00ED516A /* AppDelegate.swift */; };
@@ -35,9 +32,6 @@
 
 /* Begin PBXFileReference section */
 		238D0C021B169A0900703F8C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		238D0C031B169A0900703F8C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		238D0C041B169A0900703F8C /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		238D0C051B169A0900703F8C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		238D0C0D1B16B6D400703F8C /* SUNN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SUNN.otf; sourceTree = "<group>"; };
 		238D0C0F1B16B6E900703F8C /* sunday.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunday.otf; sourceTree = "<group>"; };
 		23BC0BBC1B153F7D00ED516A /* SunBlockMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunBlockMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BC0BE41B1552F800ED516A /* CoreLocation.framework in Frameworks */,
-				238D0C071B169A0900703F8C /* Parse.framework in Frameworks */,
-				238D0C091B169A0900703F8C /* ParseUI.framework in Frameworks */,
 				238D0C061B169A0900703F8C /* Bolts.framework in Frameworks */,
-				238D0C081B169A0900703F8C /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				238D0C021B169A0900703F8C /* Bolts.framework */,
-				238D0C031B169A0900703F8C /* Parse.framework */,
-				238D0C041B169A0900703F8C /* ParseCrashReporting.framework */,
-				238D0C051B169A0900703F8C /* ParseUI.framework */,
 				23BC0BE31B1552F700ED516A /* CoreLocation.framework */,
 				23BC0BBE1B153F7D00ED516A /* SunBlockMe */,
 				23BC0BD61B153F7D00ED516A /* SunBlockMeTests */,
@@ -217,6 +205,7 @@
 					};
 					23BC0BD21B153F7D00ED516A = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = N76RBB796S;
 						TestTargetID = 23BC0BBB1B153F7D00ED516A;
 					};
 				};
@@ -440,6 +429,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -451,6 +442,7 @@
 				INFOPLIST_FILE = SunBlockMeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunBlockMe.app/SunBlockMe";
 			};
 			name = Debug;
@@ -459,6 +451,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -466,6 +460,7 @@
 				INFOPLIST_FILE = SunBlockMeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunBlockMe.app/SunBlockMe";
 			};
 			name = Release;

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Parse
+//import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("hPmzfUNGenDw0vcmaJm4Pwjq4Z9xXUaZkosIjLo0",
-            clientKey: "4voxiW3h6tFeKzFvQsXkkpdt62xhLyktuYbcFg07")
+//        Parse.setApplicationId("hPmzfUNGenDw0vcmaJm4Pwjq4Z9xXUaZkosIjLo0",
+//            clientKey: "4voxiW3h6tFeKzFvQsXkkpdt62xhLyktuYbcFg07")
         
 //        // Register for push notifications, if running iOS 8
 //        if application.respondsToSelector("registerUserNotificationSettings:"){
