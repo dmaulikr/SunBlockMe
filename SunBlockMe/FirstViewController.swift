@@ -46,6 +46,23 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     func didTapView(){
         self.view.endEditing(true)
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
+            if error != nil {
+                println("Error: " + error.localizedDescription)
+                return
+            }
+            if placemarks.count > 0 {
+                let pm = placemarks[0] as! CLPlacemark
+                self.displayLocationInfo(pm)
+            } else {
+                println("Error with the data")
+            }
+        })
+    }
+    
+    
 
 }
 
