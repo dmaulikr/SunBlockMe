@@ -7,25 +7,34 @@
 //
 
 import UIKit
+import CoreLocation
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!
     @IBOutlet weak var activityLabel: UILabel!
     
+    let locationManager = CLLocationManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     spfLabel.text = "SPF"
         spfLabel.font = UIFont(name: "sunday", size: 60.0)
         spfText.font = UIFont(name: "SUNN", size: 55.0)
         activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
         
+    // tap anywhere to exit num keypad
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +42,7 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-        // tap anywhere to exit num keypad
+    // tap anywhere to exit num keypad
     func didTapView(){
         self.view.endEditing(true)
     }
