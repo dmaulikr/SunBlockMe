@@ -25,10 +25,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
         spfText.font = UIFont(name: "SUNN", size: 55.0)
         activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
         
-    // tap anywhere to exit num keypad
+    // Dismiss (num) keypad
+        // 1. Tap anywhere
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
+        // 2. Swipe down
+        var swipe: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "dismissKeyboard")
+        swipe.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipe)
         
     // Current Location
         self.locationManager.delegate = self
@@ -43,18 +48,21 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
         // Dispose of any resources that can be recreated.
     }
     
-    // tap anywhere to exit num keypad
+        // tap anywhere to exit num keypad
     func didTapView() {
         self.view.endEditing(true)
     }
-    
-    // text field delegate
+        // tap 'done' to dismiss keypad
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
     }
+        // swipe down to dismiss keypad
+    func dismissKeyboard() {
+        self.spfText.resignFirstResponder()
+    }
     
-    // Current Location delegate methods
+        // Current Location delegate methods
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
             if error != nil {
