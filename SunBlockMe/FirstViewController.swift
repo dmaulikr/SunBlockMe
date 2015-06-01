@@ -70,6 +70,10 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         println(placemark.country)
     }
     
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("Error: " + error.localizedDescription)
+    }
+    
 
 }
 
