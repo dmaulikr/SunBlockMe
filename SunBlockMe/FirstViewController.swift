@@ -29,13 +29,22 @@ class FirstViewController: UIViewController {
         spfLabel.font = UIFont(name: "sunday", size: 60.0)
         spfText.font = UIFont(name: "SUNN", size: 55.0)
         activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
+        
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: "didTapView")
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    func didTapView(){
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
 
 }
 
