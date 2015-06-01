@@ -43,7 +43,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     // tap anywhere to exit num keypad
-    func didTapView(){
+    func didTapView() {
         self.view.endEditing(true)
     }
     
@@ -62,6 +62,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
+    func displayLocationInfo(placemark: CLPlacemark) {
+        self.locationManager.stopUpdatingLocation()
+        println(placemark.locality)
+        println(placemark.postalCode)
+        println(placemark.administrativeArea)
+        println(placemark.country)
+    }
     
 
 }
