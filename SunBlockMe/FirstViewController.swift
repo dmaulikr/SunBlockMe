@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class FirstViewController: UIViewController, CLLocationManagerDelegate {
+class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!
@@ -30,6 +30,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         tapRecognizer.addTarget(self, action: "didTapView")
         self.view.addGestureRecognizer(tapRecognizer)
         
+    // Current Location
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -47,6 +48,13 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         self.view.endEditing(true)
     }
     
+    // text field delegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    // Current Location delegate methods
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
             if error != nil {
