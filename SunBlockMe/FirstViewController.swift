@@ -17,15 +17,8 @@ class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        let fontFamilyNames = UIFont.familyNames()
-//        for familyName in fontFamilyNames {
-//            println("Font Family Name = [\(familyName)]")
-//            let names = UIFont.fontNamesForFamilyName(familyName as! String)
-//            println("Font Names = [\(names)]")
-//        }
-        
-        spfLabel.text = "SPF"
+
+     spfLabel.text = "SPF"
         spfLabel.font = UIFont(name: "sunday", size: 60.0)
         spfText.font = UIFont(name: "SUNN", size: 55.0)
         activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
@@ -35,16 +28,15 @@ class FirstViewController: UIViewController {
         self.view.addGestureRecognizer(tapRecognizer)
     }
     
-    func didTapView(){
-        self.view.endEditing(true)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+        // tap anywhere to exit num keypad
+    func didTapView(){
+        self.view.endEditing(true)
+    }
 
 }
 
