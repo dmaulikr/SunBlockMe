@@ -88,9 +88,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Activity" image="waves" id="acW-dT-cKf">
                         <inset key="imageInsets" minX="0.0" minY="-6" maxX="0.0" maxY="6"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="waves"/>
-                        </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
                         <outlet property="activityLabel" destination="sxz-ho-eTF" id="rFB-jY-zZP"/>
@@ -157,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="UV Index" image="sun" selectedImage="sun-50" id="Ctc-hT-vbH">
+                    <tabBarItem key="tabBarItem" title="UV Index" image="sun" id="Ctc-hT-vbH">
                         <inset key="imageInsets" minX="3" minY="4" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -189,7 +186,6 @@
     </scenes>
     <resources>
         <image name="sun" width="72" height="72"/>
-        <image name="sun-50" width="50" height="50"/>
         <image name="sunglasses" width="50" height="50"/>
         <image name="waves" width="72" height="72"/>
     </resources>
