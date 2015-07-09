@@ -10,7 +10,6 @@
 		238D0C061B169A0900703F8C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238D0C021B169A0900703F8C /* Bolts.framework */; };
 		238D0C0E1B16B6D400703F8C /* SUNN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0D1B16B6D400703F8C /* SUNN.otf */; };
 		238D0C101B16B6E900703F8C /* sunday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0F1B16B6E900703F8C /* sunday.otf */; };
-		23903FB71B2F52370094843D /* sunglasses-400.png in Resources */ = {isa = PBXBuildFile; fileRef = 23903FB61B2F52370094843D /* sunglasses-400.png */; };
 		23BC0BC21B153F7D00ED516A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC11B153F7D00ED516A /* AppDelegate.swift */; };
 		23BC0BC41B153F7D00ED516A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC31B153F7D00ED516A /* FirstViewController.swift */; };
 		23BC0BC61B153F7D00ED516A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC51B153F7D00ED516A /* SecondViewController.swift */; };
@@ -35,7 +34,6 @@
 		238D0C021B169A0900703F8C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		238D0C0D1B16B6D400703F8C /* SUNN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SUNN.otf; sourceTree = "<group>"; };
 		238D0C0F1B16B6E900703F8C /* sunday.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sunday.otf; sourceTree = "<group>"; };
-		23903FB61B2F52370094843D /* sunglasses-400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunglasses-400.png"; sourceTree = "<group>"; };
 		23BC0BBC1B153F7D00ED516A /* SunBlockMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunBlockMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BC0BC01B153F7D00ED516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23BC0BC11B153F7D00ED516A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				23BC0BC31B153F7D00ED516A /* FirstViewController.swift */,
 				23BC0BC51B153F7D00ED516A /* SecondViewController.swift */,
 				23BC0BC71B153F7D00ED516A /* Main.storyboard */,
-				23903FB61B2F52370094843D /* sunglasses-400.png */,
 				23BC0BCA1B153F7D00ED516A /* Images.xcassets */,
 				23BC0BCC1B153F7D00ED516A /* LaunchScreen.xib */,
 				23BC0BBF1B153F7D00ED516A /* Supporting Files */,
@@ -237,7 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23903FB71B2F52370094843D /* sunglasses-400.png in Resources */,
 				23BC0BC91B153F7D00ED516A /* Main.storyboard in Resources */,
 				23BC0BCE1B153F7D00ED516A /* LaunchScreen.xib in Resources */,
 				238D0C101B16B6E900703F8C /* sunday.otf in Resources */,
