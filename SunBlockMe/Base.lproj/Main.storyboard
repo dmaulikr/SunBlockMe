@@ -7,7 +7,7 @@
         <!--Activity-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Activity" id="9pv-A4-QxB" customClass="ActivityController" sceneMemberID="viewController">
+                <viewController title="Activity" id="9pv-A4-QxB" customClass="FirstViewController" customModule="SunBlockMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -102,7 +102,7 @@
         <!--Sunblock Reminder-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Sunblock Reminder" id="8rJ-Kc-sve" customClass="TimerController" sceneMemberID="viewController">
+                <viewController title="Sunblock Reminder" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="SunBlockMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -138,7 +138,7 @@
                         <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="countdownLabel" destination="zEq-FU-wV5" id="P2O-JI-px0"/>
+                        <outlet property="countdownLabel" destination="zEq-FU-wV5" id="57Y-Ls-ELM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

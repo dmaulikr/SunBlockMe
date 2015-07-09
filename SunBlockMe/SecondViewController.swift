@@ -10,10 +10,20 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var countdownLabel: UILabel!
+    
+    var count = 10
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
     }
+    
+    func countdown() {
+        
+        if(count > 0)
+        {
+            countdownLabel.text = String(count--)
+        }    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

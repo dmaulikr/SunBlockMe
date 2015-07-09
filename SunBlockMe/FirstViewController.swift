@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ActivityController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
+class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!

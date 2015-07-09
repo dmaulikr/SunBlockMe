@@ -11,8 +11,8 @@
 		238D0C0E1B16B6D400703F8C /* SUNN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0D1B16B6D400703F8C /* SUNN.otf */; };
 		238D0C101B16B6E900703F8C /* sunday.otf in Resources */ = {isa = PBXBuildFile; fileRef = 238D0C0F1B16B6E900703F8C /* sunday.otf */; };
 		23BC0BC21B153F7D00ED516A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC11B153F7D00ED516A /* AppDelegate.swift */; };
-		23BC0BC41B153F7D00ED516A /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC31B153F7D00ED516A /* ActivityController.swift */; };
-		23BC0BC61B153F7D00ED516A /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC51B153F7D00ED516A /* TimerController.swift */; };
+		23BC0BC41B153F7D00ED516A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC31B153F7D00ED516A /* FirstViewController.swift */; };
+		23BC0BC61B153F7D00ED516A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0BC51B153F7D00ED516A /* SecondViewController.swift */; };
 		23BC0BC91B153F7D00ED516A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23BC0BC71B153F7D00ED516A /* Main.storyboard */; };
 		23BC0BCB1B153F7D00ED516A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BC0BCA1B153F7D00ED516A /* Images.xcassets */; };
 		23BC0BCE1B153F7D00ED516A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23BC0BCC1B153F7D00ED516A /* LaunchScreen.xib */; };
@@ -37,8 +37,8 @@
 		23BC0BBC1B153F7D00ED516A /* SunBlockMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunBlockMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BC0BC01B153F7D00ED516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23BC0BC11B153F7D00ED516A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23BC0BC31B153F7D00ED516A /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
-		23BC0BC51B153F7D00ED516A /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		23BC0BC31B153F7D00ED516A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		23BC0BC51B153F7D00ED516A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		23BC0BC81B153F7D00ED516A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23BC0BCA1B153F7D00ED516A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23BC0BCD1B153F7D00ED516A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 			children = (
 				238D0C0A1B16B69400703F8C /* Resources */,
 				23BC0BC11B153F7D00ED516A /* AppDelegate.swift */,
-				23BC0BC31B153F7D00ED516A /* ActivityController.swift */,
-				23BC0BC51B153F7D00ED516A /* TimerController.swift */,
+				23BC0BC31B153F7D00ED516A /* FirstViewController.swift */,
+				23BC0BC51B153F7D00ED516A /* SecondViewController.swift */,
 				23BC0BC71B153F7D00ED516A /* Main.storyboard */,
 				23BC0BCA1B153F7D00ED516A /* Images.xcassets */,
 				23BC0BCC1B153F7D00ED516A /* LaunchScreen.xib */,
@@ -256,9 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23BC0BC61B153F7D00ED516A /* TimerController.swift in Sources */,
+				23BC0BC61B153F7D00ED516A /* SecondViewController.swift in Sources */,
 				23BC0BC21B153F7D00ED516A /* AppDelegate.swift in Sources */,
-				23BC0BC41B153F7D00ED516A /* ActivityController.swift in Sources */,
+				23BC0BC41B153F7D00ED516A /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
