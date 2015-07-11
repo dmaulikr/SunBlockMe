@@ -20,6 +20,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     // Dismiss (num) keypad
         // 1. Tap anywhere
         let tapRecognizer = UITapGestureRecognizer()
@@ -40,6 +41,19 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        if (spfText.text.isEmpty){
+            let alert = UIAlertView()
+            alert.title = "No Text"
+            alert.message = "Please enter an SPF value"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            return false
+        } else {
+            return true
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
