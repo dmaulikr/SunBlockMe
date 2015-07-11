@@ -10,20 +10,26 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var countdownLabel: UILabel!
-    
-    var count = 10
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("countdown"), userInfo: nil, repeats: true)
+    //MARK: - Outlets and properties
+    @IBOutlet weak var displayCountDownTimeLabel: UILabel!
+    @IBAction func start(sender: AnyObject) {
     }
     
-    func countdown() {
-        
-        if(count > 0)
-        {
-            countdownLabel.text = String(count--)
-        }    }
+    @IBAction func stop(sender: AnyObject) {
+    }
+    
+    //MARK: - Actions
+   
+    
+    //MARK: - Instance Methods
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -111,27 +111,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Countdown Timer" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
                                 <rect key="frame" x="159" y="279" width="283" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="rMq-vz-vLe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofN-ju-0rv">
-                                <rect key="frame" x="281" y="386" width="38" height="30"/>
+                                <rect key="frame" x="159" y="386" width="38" height="30"/>
                                 <state key="normal" title="Start!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="NB4-FM-Pzs"/>
+                                    <action selector="startTimer:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Z52-NQ-TWU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-c5-NDM">
+                                <rect key="frame" x="409" y="386" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Zwo-Ah-87e"/>
+                                    <action selector="stopTimer:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="z3F-n6-xgt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-iR-d2O">
+                                <rect key="frame" x="16" y="20" width="35" height="30"/>
+                                <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ofN-ju-0rv" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="65" id="K3W-Mg-Dip"/>
-                            <constraint firstItem="ofN-ju-0rv" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="UdA-yX-wmd"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ofN-ju-0rv" secondAttribute="bottom" constant="135" id="jfn-k4-BR8"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="ofN-ju-0rv" firstAttribute="baseline" secondItem="Q1h-c5-NDM" secondAttribute="baseline" id="SLn-Pr-5RN"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="ofN-ju-0rv" secondAttribute="leading" id="WHk-xE-cfT"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Q1h-c5-NDM" secondAttribute="bottom" constant="135" id="YsF-Is-OAI"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ZJg-vt-a7l"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="trailing" secondItem="Q1h-c5-NDM" secondAttribute="trailing" id="eSt-zj-83o"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="ejG-Hd-lBh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SPF Reminder" image="sunglasses" id="cPa-gy-q4n">
@@ -139,6 +163,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="countdownLabel" destination="zEq-FU-wV5" id="57Y-Ls-ELM"/>
+                        <outlet property="displayCountDownTimeLabel" destination="zEq-FU-wV5" id="ONt-5b-bWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
