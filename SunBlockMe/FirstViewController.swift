@@ -47,8 +47,15 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if (spfText.text.isEmpty){
             let alert = UIAlertView()
-            alert.title = "No Text"
+            alert.title = "SPF Error"
             alert.message = "Please enter an SPF value"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            return false
+        } else if (spfText.text.toInt() > 100) {
+            let alert = UIAlertView()
+            alert.title = "SPF Error"
+            alert.message = "Please enter an SPF value that's below 100"
             alert.addButtonWithTitle("OK")
             alert.show()
             return false
