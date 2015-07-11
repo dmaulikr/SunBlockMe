@@ -33,6 +33,11 @@ class SecondViewController: UIViewController {
         timer.invalidate()
     }
     
+    @IBAction func back(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: {});
+    }
+    
+    
     // MARK: Instance methods
     func updateTime() {
         if (secondsLeft > 0) {

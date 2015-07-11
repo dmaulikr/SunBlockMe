@@ -14,7 +14,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!
     @IBOutlet weak var activityLabel: UILabel!
-    @IBAction func allSet(sender: AnyObject) {
+    func allSet(sender: AnyObject) {
     }
     
     let locationManager = CLLocationManager()
