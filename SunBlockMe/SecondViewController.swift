@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
     var minutes: Int = 0
     var seconds: Int = 0
     var toPass: String!
-//    var spfPassedData: Int!
+    let spfPassedData = displayTime(spfValue!)
     
     // MARK: Actions
     @IBAction func start(sender: AnyObject) {
@@ -49,8 +49,8 @@ class SecondViewController: UIViewController {
         } else {
             // ADD ALERT? LOCAL NOTIFICATION? when timer is finished
             timer.invalidate()
-            displayCountDownTimeLabel.text = "00:02:00" // Set this to variable -- able to be set at view load
-            secondsLeft = 120 // TEST: 2 min
+            displayTime(spfValue!) // Set this to variable -- able to be set at view load
+            secondsLeft = 180 // TEST: 2 min
         }
     }
     
@@ -59,9 +59,32 @@ class SecondViewController: UIViewController {
         // ADD: PASS IN START TIME PARAMS HERE TO SECONDSLEFT
         println("\(toPass)")
         
-        secondsLeft = 120; // TEST: 2 minutes
-        displayCountDownTimeLabel.text = "00:02:00"
-        
+//        secondsLeft = 120; // TEST: 2 minutes
+        let spfValue:Int? = toPass.toInt()
+        displayTime(spfValue!)
+    }
+    
+    func displayTime(value:Int) {
+        switch value {
+        case (55...100):
+            secondsLeft = 3600
+            displayCountDownTimeLabel.text = "00:60:00"
+        case (45...55):
+            secondsLeft = 2700
+            displayCountDownTimeLabel.text = "00:45:00"
+        case (30...45):
+            secondsLeft = 1800
+            displayCountDownTimeLabel.text = "00:30:00"
+        case (15...30):
+            secondsLeft = 1200
+            displayCountDownTimeLabel.text = "00:20:00"
+        case (0...15):
+            secondsLeft = 900
+            displayCountDownTimeLabel.text = "00:15:00"
+        default:
+            secondsLeft = 900
+            displayCountDownTimeLabel.text = "00:15:00"
+        }
     }
 
     override func didReceiveMemoryWarning() {
