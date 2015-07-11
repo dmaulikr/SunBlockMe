@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Activity-->
@@ -102,6 +103,7 @@
         <!--Sunblock Reminder-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController title="Sunblock Reminder" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="SunBlockMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -111,16 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="159" y="279" width="283" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="283" id="rMq-vz-vLe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofN-ju-0rv">
                                 <rect key="frame" x="159" y="386" width="38" height="30"/>
                                 <state key="normal" title="Start!">
@@ -128,7 +120,6 @@
                                 </state>
                                 <connections>
                                     <action selector="start:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="NB4-FM-Pzs"/>
-                                    <action selector="startTimer:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Z52-NQ-TWU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1h-c5-NDM">
@@ -138,35 +129,44 @@
                                 </state>
                                 <connections>
                                     <action selector="stop:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Zwo-Ah-87e"/>
-                                    <action selector="stopTimer:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="z3F-n6-xgt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-iR-d2O">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-iR-d2O">
                                 <rect key="frame" x="16" y="20" width="35" height="30"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3d-QS-tbX">
+                                <rect key="frame" x="159" y="198" width="283" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="L1g-kF-sz4"/>
+                                    <constraint firstAttribute="height" constant="57" id="clJ-5n-puq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ofN-ju-0rv" firstAttribute="baseline" secondItem="Q1h-c5-NDM" secondAttribute="baseline" id="SLn-Pr-5RN"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="ofN-ju-0rv" secondAttribute="leading" id="WHk-xE-cfT"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Q1h-c5-NDM" secondAttribute="bottom" constant="135" id="YsF-Is-OAI"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="ZJg-vt-a7l"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="trailing" secondItem="Q1h-c5-NDM" secondAttribute="trailing" id="eSt-zj-83o"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="ejG-Hd-lBh"/>
+                            <constraint firstItem="R3d-QS-tbX" firstAttribute="leading" secondItem="ofN-ju-0rv" secondAttribute="leading" id="7Au-bo-XBw"/>
+                            <constraint firstItem="R3d-QS-tbX" firstAttribute="trailing" secondItem="Q1h-c5-NDM" secondAttribute="trailing" id="AUp-4Z-ymA"/>
+                            <constraint firstItem="ofN-ju-0rv" firstAttribute="baseline" secondItem="Q1h-c5-NDM" secondAttribute="baseline" id="Idw-jK-uc2"/>
+                            <constraint firstItem="9uB-iR-d2O" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="NIG-Lg-B9K"/>
+                            <constraint firstItem="R3d-QS-tbX" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Nz4-kY-Bhc"/>
+                            <constraint firstItem="9uB-iR-d2O" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="aC4-BV-Gc8"/>
+                            <constraint firstItem="R3d-QS-tbX" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="178" id="l9J-Iy-6Iq"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="ofN-ju-0rv" secondAttribute="bottom" constant="135" id="z1D-DD-XjE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SPF Reminder" image="sunglasses" id="cPa-gy-q4n">
                         <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-1"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="countdownLabel" destination="zEq-FU-wV5" id="57Y-Ls-ELM"/>
-                        <outlet property="displayCountDownTimeLabel" destination="zEq-FU-wV5" id="ONt-5b-bWn"/>
+                        <outlet property="displayCountDownTimeLabel" destination="R3d-QS-tbX" id="6da-Jv-WJe"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
