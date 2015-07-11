@@ -64,15 +64,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "segueTimer") {
-            var svc = segue.destinationViewController as! SecondViewController;
-            svc.toPass = spfText.text
-        }
-    }
-    
-    
-    
         // tap anywhere to exit num keypad
     func didTapView() {
         self.view.endEditing(true)
@@ -105,14 +96,24 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     func displayLocationInfo(placemark: CLPlacemark) {
         self.locationManager.stopUpdatingLocation()
+        println("************")
+        println(placemark.location)
         println(placemark.locality)
         println(placemark.postalCode)
         println(placemark.administrativeArea)
         println(placemark.country)
+        println("***********")
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error: " + error.localizedDescription)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "segueTimer") {
+            var svc = segue.destinationViewController as! SecondViewController;
+            svc.toPass = spfText.text
+        }
     }
 
 }
