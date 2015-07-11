@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SUNN.otf">
@@ -10,6 +11,8 @@
             <string>SUNN</string>
         </mutableArray>
         <mutableArray key="sunday.otf">
+            <string>Sunday</string>
+            <string>Sunday</string>
             <string>Sunday</string>
         </mutableArray>
     </customFonts>
@@ -208,7 +211,33 @@
                     <view key="view" contentMode="scaleToFill" id="qpg-L2-eIr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDEX PAGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ark-84-L6d">
+                                <rect key="frame" x="16" y="232" width="568" height="72"/>
+                                <fontDescription key="fontDescription" name="Sunday" family="Sunday" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.80392163989999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUST ADD UV " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXR-zc-dpc">
+                                <rect key="frame" x="16" y="121" width="568" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="RgG-7N-Qmi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Sunday" family="Sunday" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.80392163989999998" blue="0.9450981021" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.91396109233119638" blue="0.34281847130694132" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fXR-zc-dpc" firstAttribute="trailing" secondItem="qpg-L2-eIr" secondAttribute="trailingMargin" id="2e8-Bp-gmb"/>
+                            <constraint firstItem="ark-84-L6d" firstAttribute="top" secondItem="fXR-zc-dpc" secondAttribute="bottom" constant="8" symbolic="YES" id="5ZV-iV-34X"/>
+                            <constraint firstItem="fXR-zc-dpc" firstAttribute="top" secondItem="Vuc-or-ZPt" secondAttribute="bottom" constant="101" id="AYc-nM-jPt"/>
+                            <constraint firstItem="ark-84-L6d" firstAttribute="leading" secondItem="fXR-zc-dpc" secondAttribute="leading" id="Fsi-XQ-EgW"/>
+                            <constraint firstItem="fXR-zc-dpc" firstAttribute="leading" secondItem="qpg-L2-eIr" secondAttribute="leadingMargin" id="PPh-9q-Ahd"/>
+                            <constraint firstItem="ark-84-L6d" firstAttribute="trailing" secondItem="fXR-zc-dpc" secondAttribute="trailing" id="inv-QT-TzG"/>
+                            <constraint firstItem="NjQ-Jt-0hB" firstAttribute="top" secondItem="ark-84-L6d" secondAttribute="bottom" constant="247" id="saC-cd-MdY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UV Index" image="sun" id="Ctc-hT-vbH">
                         <inset key="imageInsets" minX="3" minY="4" maxX="0.0" maxY="-1"/>
@@ -231,7 +260,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="HCv-ba-8hp" kind="relationship" relationship="viewControllers" id="BmB-XU-OJa"/>
                     </connections>
                 </tabBarController>
@@ -245,7 +273,4 @@
         <image name="sunglasses" width="50" height="50"/>
         <image name="waves" width="72" height="72"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="m44-MS-bdM"/>
-    </inferredMetricsTieBreakers>
 </document>

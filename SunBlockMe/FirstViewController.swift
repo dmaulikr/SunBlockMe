@@ -20,6 +20,7 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spfText.font = UIFont(name: "SUNN", size: 55.0)
         
     // Dismiss (num) keypad
         // 1. Tap anywhere
