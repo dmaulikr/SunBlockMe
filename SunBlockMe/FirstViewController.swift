@@ -14,19 +14,12 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!
     @IBOutlet weak var activityLabel: UILabel!
+    let locationManager = CLLocationManager()
     func allSet(sender: AnyObject) {
     }
     
-    let locationManager = CLLocationManager()
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        spfLabel.font = UIFont(name: "sunday", size: 60.0)
-        spfText.font = UIFont(name: "SUNN", size: 55.0)
-        activityLabel.font =  UIFont(name: "SUNN", size: 90.0)
-        
     // Dismiss (num) keypad
         // 1. Tap anywhere
         let tapRecognizer = UITapGestureRecognizer()
@@ -52,7 +45,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "segueTimer") {
             var svc = segue.destinationViewController as! SecondViewController;
-            
             svc.toPass = spfText.text
         }
     }

@@ -19,7 +19,7 @@ class SecondViewController: UIViewController {
     var minutes: Int = 0
     var seconds: Int = 0
     var toPass: String!
-    let spfPassedData = displayTime(spfValue!)
+    let spfPassedData: Int? = 0
     
     // MARK: Actions
     @IBAction func start(sender: AnyObject) {
@@ -49,17 +49,16 @@ class SecondViewController: UIViewController {
         } else {
             // ADD ALERT? LOCAL NOTIFICATION? when timer is finished
             timer.invalidate()
-            displayTime(spfValue!) // Set this to variable -- able to be set at view load
-            secondsLeft = 180 // TEST: 2 min
+            if let startValue = self.toPass.toInt() {
+            displayTime(startValue) // Set this to variable -- able to be set at view load
+//            secondsLeft = 180 // TEST: 2 min
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // ADD: PASS IN START TIME PARAMS HERE TO SECONDSLEFT
         println("\(toPass)")
-        
-//        secondsLeft = 120; // TEST: 2 minutes
         let spfValue:Int? = toPass.toInt()
         displayTime(spfValue!)
     }

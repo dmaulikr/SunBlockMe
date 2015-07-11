@@ -6,6 +6,11 @@
     <customFonts key="customFonts">
         <mutableArray key="SUNN.otf">
             <string>SUNN</string>
+            <string>SUNN</string>
+            <string>SUNN</string>
+        </mutableArray>
+        <mutableArray key="sunday.otf">
+            <string>Sunday</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -26,7 +31,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="9Ds-gB-FQq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SUNN" family="SUNN" pointSize="90"/>
                                 <color key="textColor" red="0.90196084976196289" green="0.90588241815567017" blue="0.26274511218070984" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -35,7 +40,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="IZt-3h-LZB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Sunday" family="Sunday" pointSize="60"/>
                                 <color key="textColor" red="0.89803928136825562" green="0.92549026012420654" blue="0.17647059261798859" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="60" id="M0s-Tw-8g4"/>
                                     <constraint firstAttribute="width" constant="58" id="nJY-7H-ZXs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SUNN" family="SUNN" pointSize="55"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="uaR-NL-KnK"/>
@@ -241,6 +246,6 @@
         <image name="waves" width="72" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lzU-1b-eKA"/>
+        <segue reference="m44-MS-bdM"/>
     </inferredMetricsTieBreakers>
 </document>
