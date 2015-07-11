@@ -18,6 +18,8 @@ class SecondViewController: UIViewController {
     var hours: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
+    var toPass: String!
+//    var spfPassedData: Int!
     
     // MARK: Actions
     @IBAction func start(sender: AnyObject) {
@@ -50,6 +52,8 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // ADD: PASS IN START TIME PARAMS HERE TO SECONDSLEFT
+        println("\(toPass)")
+        
         secondsLeft = 120; // TEST: 2 minutes
         displayCountDownTimeLabel.text = "00:02:00"
         

@@ -14,6 +14,8 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     @IBOutlet weak var spfLabel: UILabel!
     @IBOutlet var spfText: UITextField!
     @IBOutlet weak var activityLabel: UILabel!
+    @IBAction func allSet(sender: AnyObject) {
+    }
     
     let locationManager = CLLocationManager()
     
@@ -45,8 +47,17 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "segueTimer") {
+            var svc = segue.destinationViewController as! SecondViewController;
+            
+            svc.toPass = spfText.text
+        }
+    }
+    
+    
     
         // tap anywhere to exit num keypad
     func didTapView() {
@@ -89,7 +100,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate, UITextFi
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         println("Error: " + error.localizedDescription)
     }
-    
 
 }
 

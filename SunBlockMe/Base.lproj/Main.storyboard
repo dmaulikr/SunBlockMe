@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SUNN.otf">
+            <string>SUNN</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Activity-->
         <scene sceneID="hNz-n2-bh7">
@@ -66,6 +71,18 @@
                                     <constraint firstAttribute="width" constant="69" id="eFm-hf-aM3"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbc-Iy-XC6">
+                                <rect key="frame" x="266" y="425" width="69" height="37"/>
+                                <fontDescription key="fontDescription" name="SUNN" family="SUNN" pointSize="41"/>
+                                <state key="normal" title="ALL SET!">
+                                    <color key="titleColor" red="0.90196084980000002" green="0.90588241820000004" blue="0.26274511220000002" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="allSet:" destination="9pv-A4-QxB" eventType="touchUpInside" id="edK-XT-kDs"/>
+                                    <segue destination="8rJ-Kc-sve" kind="show" identifier="segueTimer" id="m44-MS-bdM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.80392163991928101" blue="0.94509810209274292" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -73,13 +90,16 @@
                             <constraint firstItem="oFX-Pt-PYh" firstAttribute="leading" secondItem="sxz-ho-eTF" secondAttribute="leading" id="8KB-OD-CcZ"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="oFX-Pt-PYh" secondAttribute="bottom" constant="146" id="8v3-vk-F2h"/>
                             <constraint firstItem="LCg-Am-Xbf" firstAttribute="leading" secondItem="oFX-Pt-PYh" secondAttribute="trailing" constant="8" symbolic="YES" id="AGG-9F-jCg"/>
+                            <constraint firstItem="tbc-Iy-XC6" firstAttribute="leading" secondItem="LCg-Am-Xbf" secondAttribute="leading" id="NJT-Hf-tnC"/>
                             <constraint firstItem="hJS-OT-fqi" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="92" id="NKg-CK-hJU"/>
                             <constraint firstItem="zN7-NO-PtH" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="122" id="PzD-SW-58c"/>
                             <constraint firstItem="zN7-NO-PtH" firstAttribute="trailing" secondItem="d2C-aT-XU5" secondAttribute="trailing" id="Q1O-kR-iKB"/>
                             <constraint firstItem="sxz-ho-eTF" firstAttribute="top" secondItem="hJS-OT-fqi" secondAttribute="bottom" constant="8" id="SxY-ZC-Rnp"/>
                             <constraint firstItem="d2C-aT-XU5" firstAttribute="leading" secondItem="LCg-Am-Xbf" secondAttribute="trailing" constant="8" symbolic="YES" id="Taj-4w-HL2"/>
                             <constraint firstItem="oFX-Pt-PYh" firstAttribute="top" secondItem="LCg-Am-Xbf" secondAttribute="top" id="YMz-xV-dmN"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="tbc-Iy-XC6" secondAttribute="bottom" constant="89" id="ZU4-Ol-hjA"/>
                             <constraint firstItem="zN7-NO-PtH" firstAttribute="leading" secondItem="hJS-OT-fqi" secondAttribute="trailing" constant="49" id="hcP-eN-vfh"/>
+                            <constraint firstItem="tbc-Iy-XC6" firstAttribute="top" secondItem="LCg-Am-Xbf" secondAttribute="bottom" constant="20" id="ngR-H6-XSU"/>
                             <constraint firstItem="LCg-Am-Xbf" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="p3e-qs-KBo"/>
                             <constraint firstItem="oFX-Pt-PYh" firstAttribute="top" secondItem="sxz-ho-eTF" secondAttribute="bottom" constant="8" id="swp-6C-wWW"/>
                             <constraint firstItem="LCg-Am-Xbf" firstAttribute="bottom" secondItem="oFX-Pt-PYh" secondAttribute="bottom" id="tZf-y9-Bht"/>
@@ -218,4 +238,7 @@
         <image name="sunglasses" width="50" height="50"/>
         <image name="waves" width="72" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m44-MS-bdM"/>
+    </inferredMetricsTieBreakers>
 </document>
